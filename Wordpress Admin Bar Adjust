@@ -1,0 +1,32 @@
+When the admin bar is visible on the front-end, WordPress attaches the class .admin-bar to the <body> of the page. (This is handled by the function body_class(); in header.php most of the time.) That class will let us adjust the top position of our sticky header.
+
+Replace ".sticky-header" with the class that you used for your sticky header.
+
+<style>
+
+.admin-bar .sticky-header {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar .sticky-header {
+    top: 46px;
+  }
+}
+
+</style>
+
+
+
+If you prefer mobile-first, you can use. 
+
+<style>
+.admin-bar .sticky-header {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .sticky-header {
+    top: 32px;
+  }
+}
+</style>
